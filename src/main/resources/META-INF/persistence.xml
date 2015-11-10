@@ -17,10 +17,41 @@
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://nerdti.com:5432/nerdtic1_cdweb" />
 			<property name="javax.persistence.jdbc.user" value="nerdtic1_willian" />
 			<property name="javax.persistence.jdbc.password" value="6]fHW{$P6!.R" />
-<!-- 			<property name="eclipselink.ddl-generation" value="create-tables" /> -->
-			<!-- <property name="eclipselink.ddl-generation" value="create-or-extend-tables" 
-				/> -->
-			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+			<!-- CRIAR NOVAS TABELAS, CASO ELAS EXISTAM ECLIPSE LINK SEGUIRÁ O COMPORTAMENTO DEFAULT DO BANCO, 
+			PODENDO SER O LANÇAMENTO DE UMA EXCECAO-->  			
+			<!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+			<!-- CRIAR NOVAS TABELAS OU ADICIONAR NOVAS COLUNAS-->
+			<!-- <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/> -->
+			<!-- RECRIAR TODO O ESQUEMA DE TABELAS-->
+			<!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+			<!-- Nada a fazer-->
+			<property name="eclipselink.ddl-generation" value="none" />
+			<property name="eclipselink.ddl-generation.output-mode"	value="database" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="cdwebPersistenceUnitLocal"
+		transaction-type="RESOURCE_LOCAL">
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		<property name="eclipselink.logging.level" value="FINE"/>
+			<property name="eclipselink.logging.thread" value="false"/>
+			<property name="eclipselink.logging.session" value="false"/>
+			<property name="eclipselink.logging.timestamp" value="false"/>
+			<property name="eclipselink.logging.exceptions" value="false"/>
+			
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/nerdtic1_cdweb" />
+			<property name="javax.persistence.jdbc.user" value="nerdtic1_willian" />
+			<property name="javax.persistence.jdbc.password" value="6]fHW{$P6!.R" />
+			<!-- CRIAR NOVAS TABELAS, CASO ELAS EXISTAM ECLIPSE LINK SEGUIRÁ O COMPORTAMENTO DEFAULT DO BANCO, 
+			PODENDO SER O LANÇAMENTO DE UMA EXCECAO-->  			
+			<!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+			<!-- CRIAR NOVAS TABELAS OU ADICIONAR NOVAS COLUNAS-->
+			<!-- <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/> -->
+			<!-- RECRIAR TODO O ESQUEMA DE TABELAS-->
+			<!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+			<!-- Nada a fazer-->
+			<property name="eclipselink.ddl-generation" value="none" />
 			<property name="eclipselink.ddl-generation.output-mode"	value="database" />
 		</properties>
 	</persistence-unit>

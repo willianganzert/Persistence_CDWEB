@@ -1,10 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.cdweb</groupId>
-	<artifactId>CDWEB_PERSISTENCE</artifactId>
+	<groupId>br.com.cdweb.persistence</groupId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cdwebPersistence</name>
+	<name>CDWEB Persistence</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -17,6 +16,18 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc4</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.4</version>
+		</dependency>
+				
+				
 
 	</dependencies>
 	<build>
@@ -26,10 +37,18 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<parent>
+		<groupId>br.com.cdweb</groupId>
+		<artifactId>server</artifactId>
+		<version>0.0.1-SNAPSHOT_SERVER</version>
+		<relativePath>./ServerExr_CDWEB</relativePath>
+	</parent>
+	<artifactId>persistence</artifactId>
+	<url>https://github.com/willianganzert/Persistence_CDWEB</url>
 </project>

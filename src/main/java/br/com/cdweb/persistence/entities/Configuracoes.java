@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 
-public class Configuracoes implements Serializable {
+public class Configuracoes extends ComunEntidades implements Serializable{
 	
 	@Id
 	private String chave;
